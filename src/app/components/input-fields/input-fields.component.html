@@ -1,0 +1,27 @@
+<div class="container-fluid">
+
+  <h1>
+    New Traffic Voilator Entry
+  </h1>
+  <form #userForm = "ngForm" (ngSubmit)="onSubmit()">
+
+    {{userModel | json}}
+
+<br><br>
+<br>
+    <input matInput placeholder="Violator's Name" class="form-control" name="Violator Name" [(ngModel)] = "userModel.name">
+
+
+    <input matInput placeholder="Aadhar Number" class="form-control" name="aadhar" [(ngModel)]="userModel.aadhar">
+    <br>
+    <input matInput placeholder="Penalty Amount" class="form-control" name="amount" [(ngModel)] = "userModel.amount">
+
+    <input matInput placeholder="Offense" class="form-control" name="offense" [(ngModel)] = "userModel.offense">
+<br>
+<br>
+
+<button mat-button class="btn btn-primary" type="submit">Submit Form</button>
+
+
+  </form>
+</div>
